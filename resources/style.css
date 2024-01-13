@@ -1,0 +1,49 @@
+.uk-container-1520 {
+    max-width: 1520px;
+}
+
+/* Core */
+/* General */
+/* Header */
+.header-upper {
+    background: #f2f2f2;
+    padding: 10.5px 0;
+    font-size: 13px;
+}
+
+.header-upper a {
+    color: #636363;
+}
+
+.header-contact .header-contact__item {
+    position: relative;
+    padding-left: 20px;
+}
+
+.header-contact .header-contact__item span.uk-icon {
+    position: absolute;
+    left: 0;
+    top: 3px;
+    font-size: 10px;
+}
+
+.header-contact .header-contact__item span.uk-icon svg {
+    width: 15px;
+}
+
+.contact-link:not(:last-child) {
+    margin-right: 10px;
+    padding-right: 10px;
+    position: relative;
+}
+
+.contact-link:not(:last-child)::before {
+    content: '';
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 1px;
+    height: 18px;
+    background-color: #d4d4d4;
+}

@@ -5,7 +5,7 @@
 </head>
 <body>
     <?php require_once 'components/header.php' ?>
-    <main>
+    <main id="homepage">
         
     </main>
     <?php require_once 'components/footer.php' ?>
