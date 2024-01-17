@@ -221,11 +221,12 @@ a:hover {
     width: 280px;
     background-color: #f03333;
     padding: 15.5px 0;
-    text-align: center;
     color: #ffff;
     font-weight: 500;
     border-radius: 5px 5px 0 0;
     cursor: pointer;
+    position: relative;
+    text-align: center;
 }
 
 .department-wrapper .uk-icon {
@@ -233,6 +234,7 @@ a:hover {
 }
 
 .department-wrapper span {
+
     position: relative;
 }
 
@@ -280,14 +282,82 @@ a:hover {
     font-weight: 500;
 }
 
-.main-menu > li a i{
+.main-menu>li a i {
     width: 12px;
 }
 
-.header-lower .header-notice{
+.header-lower .header-notice {
     font-size: 14px;
 }
-.header-lower .header-notice .uk-icon{
+
+.header-lower .header-notice .uk-icon {
     margin-right: 8px;
     color: red;
+}
+
+.department-wrapper .categories-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    box-shadow: 0 0 10px 1px hsla(0, 0%, 56%, .1);
+    width: 100%;
+    text-align: left;
+}
+
+.categories-dropdown>ul {
+    padding: 0 40px;
+}
+
+.categories-dropdown>ul>li:not(:last-child) {
+    border-bottom: 1px solid #e9e9e9;
+}
+
+.categories-dropdown>ul>li>a {
+    display: block;
+    padding: 10px 0 10px 20px;
+    font-size: 14px;
+    color: #636363;
+    position: relative;
+}
+
+.categories-dropdown>ul>li>a::before {
+    content: '';
+    position: absolute;
+    display: block;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    width: 5px;
+    height: 5px;
+    background-color: #d6d6d6;
+    border-radius: 50%;
+}
+
+.categories-dropdown>ul>li>a.blue::before {
+    background-color: #437cfe;
+}
+
+.categories-dropdown>ul>li>a.green::before {
+    background-color: #5fca51;
+}
+
+.categories-dropdown>ul>li>a.purple::before {
+    background-color: #c24ebe;
+}
+
+.categories-dropdown>ul>li>a.text-bold {
+    font-weight: 600;
+    color: #000;
+}
+.close-categories{
+    background-color: rgba(0,0,0,.2);
+    padding: 0 40px;
+}
+.close-categories > span{
+    display: block;
+    padding: 10px 0;
+    font-weight: 500;
+    font-size: 14px;
+    color: #000;
 }

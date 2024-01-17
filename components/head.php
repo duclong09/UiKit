@@ -5,3 +5,4 @@
 <link rel="stylesheet" href="resources/css/style.css" />
 <script src="resources/js/uikit.min.js"></script>
 <script src="resources/js/uikit-icons.min.js"></script>
+<script src="resources/js/jquery-3.7.1.min.js"></script>
