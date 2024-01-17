@@ -16,20 +16,33 @@ input::-moz-placeholder {
     font-family: 'Work Sans', sans-serif;
 }
 
-.uk-container-1520 {
-    max-width: 1520px;
+.uk-container-1440 {
+    width: 1440px;
 }
 
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+.nav-list {
+    list-style: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
 
 /* General */
 /* Header */
-.pc-header{
-    border-bottom: 1px solid #e9e9e9;
-}
+
+
 .header-upper {
     background: #f2f2f2;
     padding: 10.5px 0;
     font-size: 13px;
+    /* padding: 10.5px 0;
+    font-size: 13px; */
 }
 
 .header-upper a {
@@ -71,6 +84,7 @@ input::-moz-placeholder {
 
 .header-middle {
     padding: 25px 0 10px 0px;
+    border-bottom: 1px solid #e9e9e9;
 }
 
 .header-middle .logo {
@@ -102,7 +116,6 @@ input::-moz-placeholder {
 .header-search .search-dropdown {
     position: absolute;
     top: 50%;
-
     transform: translateY(-50%);
 }
 
@@ -147,7 +160,8 @@ input::-moz-placeholder {
     border: none;
     cursor: pointer;
 }
-.header-search .btn-search:hover{
+
+.header-search .btn-search:hover {
     background-color: red;
 }
 
@@ -155,76 +169,36 @@ input::-moz-placeholder {
     color: #fff;
     width: 18px;
 }
-.header-search .uk-form{
+
+.header-search .uk-form {
     margin-bottom: 5px;
 }
 
-.most-searched > *{
+.most-searched>* {
     font-size: 13px;
     font-weight: 400;
-    color:#000;
+    color: #000;
 }
 
 
-.most-searched .search-item:not(:first-child){
-    margin-right: 20px;
-    position: relative;
-    
-}
-
-
-.most-searched .search-item:not(:last-child)::before{
-    content: '';
-    position: absolute;
-    width: 1px;
-    height: 12px;
-    top: 50%;
-    right: -13px;
-    background-color: #e9e9e9;
-    transform: translateY(-50%);
-}
-
-
-/* .most-searched{
-    position: relative;
-} */
-/* .most-searched > *::before{
-    content: '';
-    position: absolute;
-    width: 1px;
-    height: 18px;
-    top: 0;
-    left: 20px;
-    background-color: red;
-} */
-
-/* 
-.search-item::before{
-   
-} */
-
-/* .most-searched .search-item:not(:last-child){
-    content: '';
-    position: absolute;
-    background-color: #e9e9e9;
-} */
-
-
-.header-widget .widget-item:not(:first-child){
+.header-widget .widget-item:not(:first-child) {
     margin-left: 20px;
 }
-.header-widget{
+
+.header-widget {
     padding-top: 10px;
 }
 
-.header-widget .widget-item{
+.header-widget .widget-item {
     color: #000;
     position: relative;
 }
-.header-widget .widget-item svg{
+
+.header-widget .widget-item svg {
     width: 25px;
 }
-.header-widget .widget-item .number{
+
+.header-widget .widget-item .number {
     position: absolute;
     top: -9px;
     right: -6px;
@@ -236,4 +210,84 @@ input::-moz-placeholder {
     line-height: 18px;
     border-radius: 50%;
     color: #ffff;
+}
+
+.header-lower {
+    padding: 15px 0;
+}
+
+.department-wrapper {
+    margin-right: 50px;
+    width: 280px;
+    background-color: #f03333;
+    padding: 15.5px 0;
+    text-align: center;
+    color: #ffff;
+    font-weight: 500;
+    border-radius: 5px 5px 0 0;
+    cursor: pointer;
+}
+
+.department-wrapper .uk-icon {
+    max-width: 15px;
+}
+
+.department-wrapper span {
+    position: relative;
+}
+
+.department-wrapper>span::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 3px;
+    left: -40px;
+    width: 22px;
+    height: 2px;
+    background-color: #ffff;
+}
+
+.department-wrapper>span::after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 3px;
+    left: -40px;
+    width: 29px;
+    height: 2px;
+    background-color: #ffff;
+}
+
+.department-wrapper>span>span::before {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 8px;
+    left: -40px;
+    width: 15px;
+    height: 1.5px;
+    background-color: #ffff;
+}
+
+.main-menu>li:not(:last-child) {
+    margin-right: 30px;
+}
+
+.main-menu>li a {
+    color: #000;
+    font-size: 13px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.main-menu > li a i{
+    width: 12px;
+}
+
+.header-lower .header-notice{
+    font-size: 14px;
+}
+.header-lower .header-notice .uk-icon{
+    margin-right: 8px;
+    color: red;
 }
