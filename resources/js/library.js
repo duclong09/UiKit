@@ -22,7 +22,27 @@
       $('.categories-dropdown').slideToggle()
     })
   }
+
+  HT.swiper = ()=>{
+    var swiper = new Swiper(".panel-slide .swiper-container", {
+      loop: false,
+      pagination: {
+        el: '.swiper-pagination',
+      },
+      // spaceBetween: 20,
+      slidesPerView: 1,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev'
+      }
+      // breakpoints: {
+
+      // }
+    });
+  }
+
   $(document).ready(function () {
     HT.openCategoryDropdown()
+    HT.swiper()
   })
 })(jQuery)
