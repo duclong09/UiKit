@@ -4,9 +4,91 @@
     --white-color: #ffff;
     --black-color: #000;
     --background-btn: #f03333;
+    --color-svg: #f03333;
     --border-radius-50px: 50px;
     --border-radius-50: 50%;
     --fz-14: 14px;
+}
+
+/* General */
+.content-overlay {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+}
+
+.content-overlay .overlay-title {
+    font-size: 45px;
+    line-height: 48px;
+    color: var(--white-color);
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.content-overlay .overlay-description {
+    color: var(--white-color);
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.content-overlay .btn-readmore {
+    background: var(--white-color);
+    border-radius: var(--border-radius-50px);
+    font-size: var(--fz-14);
+    color: var(--black-color);
+    position: relative;
+    padding-right: 30px;
+}
+
+/* .panel-slide .content-overlay .btn-readmore .uk-icon {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    max-width: 14px;
+} */
+
+.content-overlay .btn-readmore .uk-icon svg {
+    color: var(--white-color);
+}
+
+/* .panel-slide .content-overlay .btn-readmore::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 5px;
+    right: 6px;
+    width: 20px;
+    height: 20px;
+    background-color: var(--background-btn);
+    border-radius: var(--border-radius-50);
+} */
+
+.content-overlay .btn-readmore::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 7px;
+    right: 6px;
+    width: 18px;
+    height: 18px;
+    background-color: var(--background-btn);
+    border-radius: var(--border-radius-50);
+}
+
+
+
+.content-overlay .btn-readmore .uk-icon {
+    position: absolute;
+    top: 10px;
+    right: 8px;
+    max-width: 12px;
+    font-weight: 500;
+}
+
+.content-overlay .btn-readmore:hover {
+    background-color: var(--black-color);
+    color: var(--white-color);
 }
 
 /* Core */
@@ -384,66 +466,18 @@ a:hover {
 /* Panel slide */
 .panel-slide .slide-item {
     position: relative;
+
 }
 
-.panel-slide .slide-overlay {
-    position: absolute;
-    top: 50%;
-    left: 10%;
-    transform: translateY(-50%);
+.panel-slide .slide-item img {
+    cursor: pointer;
 }
 
-.panel-slide .slide-overlay .slide-title {
-    font-size: 45px;
-    line-height: 48px;
-    color: var(--white-color);
-    font-weight: 600;
-    margin-bottom: 30px;
-}
-
-.panel-slide .slide-overlay .slide-description {
-    color: var(--white-color);
-    text-transform: uppercase;
-    margin-bottom: 20px;
-}
-
-.panel-slide .slide-overlay .btn-readmore {
-    background: var(--white-color);
-    border-radius: var(--border-radius-50px);
-    font-size: var(--fz-14);
-    color: var(--black-color);
-    position: relative;
-    padding-right: 30px;
-}
-
-.panel-slide .slide-overlay .btn-readmore .uk-icon {
-    position: absolute;
-    top: 8px;
-    right: 8px;
-    max-width: 14px;
-}
-
-.panel-slide .slide-overlay .btn-readmore .uk-icon svg {
-    color: var(--white-color);
-}
-
-.panel-slide .slide-overlay .btn-readmore::before {
-    content: '';
-    display: block;
-    position: absolute;
-    top: 5px;
-    right: 6px;
-    width: 20px;
-    height: 20px;
-    background-color: var(--background-btn);
-    border-radius: var(--border-radius-50);
+.panel-slide .slide-item .image {
+    height: 473.84px;
 }
 
 
-.panel-slide .slide-overlay .btn-readmore:hover {
-    background-color: var(--black-color);
-    color: var(--white-color);
-}
 
 .panel-slide .swiper-pagination {
     position: absolute;
@@ -453,13 +487,52 @@ a:hover {
     z-index: 10;
 }
 
-.panel-slide .swiper-pagination-bullet{
+.swiper-button-prev:after,
+.swiper-button-next:after {
+    display: none;
+}
+
+
+.panel-slide .swiper-pagination-bullet {
     background-color: var(--white-color);
     height: 5px;
     width: 5px;
     transition: all 0.6s ease;
 }
-.panel-slide .swiper-pagination-bullet-active{
+
+.overlay-readmore {
+    display: inline-block;
+}
+
+.panel-slide .swiper-pagination-bullet-active {
     width: 30px;
     border-radius: 20px;
+}
+
+.banner-wrapper .banner-item:not(:last-child) {
+    margin-bottom: 15px;
+}
+
+.banner-item {
+    position: relative;
+}
+
+
+.banner-item .content-overlay .overlay-title{
+    font-size: 20px;
+    line-height: 23px;
+}
+
+.banner-item .content-overlay .btn-readmore:hover{
+    background-color: var(--background-btn);
+}
+.banner-item .content-overlay .btn-readmore:hover::before{
+    background-color: var(--white-color);
+}
+.banner-item .content-overlay .btn-readmore:hover .uk-icon svg{
+    color: var(--color-svg);
+}
+
+.banner-item:nth-child(2) .content-overlay{
+    left: 60%;
 }
